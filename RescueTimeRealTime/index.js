@@ -14,6 +14,8 @@ function SaveKey(){
 
 function displayKey(){
   getAPIkey(function(item){
-    document.getElementById("apikey").value = item.apikey;
+    if(item.apikey){
+      document.getElementById("apikey").value = item.apikey;
+    }
   });
 }
